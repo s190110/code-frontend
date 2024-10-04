@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #eef2f5;
+  background-color: white;
+}
+
+h1{
+  font-size: larger;
+}
+h2{
+  font-size: large;
+}
+.gutter {
+  /* background-color: #eee; */
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-vertical {
+  cursor: row-resize;
+}
+.split {
+  display: flex;
+  flex-direction: row;
+}
+
+.gutter {
+  /* background-color: #e9eef3; */
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.gutter.gutter-horizontal {
+  cursor: col-resize;
+}
+.gutter.gutter-horizontal:hover {
+  background: blue;
+}
+.gutter.gutter-vertical:hover {
+  background: blue;
+}
+
+.loader {
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
